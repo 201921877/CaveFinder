@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+group 'org.example'
+version '1.0-SNAPSHOT'
+repositories {
+    mavenCentral()
+    maven {
+        url "https://maven.seedfinding.com"
+    }
+    maven {
+        url "https://maven.latticg.com"
+    }
+    maven {
+        url "https://jitpack.io"
+    }
+    maven {url "https://repo.jellejurre.dev"}
+}
+dependencies {
+    implementation('com.seedfinding:mc_core:1.210.0')
+    implementation('com.github.jellejurre:seed-checker:1.2.0-1.18.1'){transitive=false}
+    implementation ('com.github.KalleStruik:noise-sampler:1.20.0')
+    implementation('com.seedfinding:latticg:1.06@jar')
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+}
+test {
+    useJUnitPlatform()
+}
